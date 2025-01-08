@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ingatlankezelo.HelloController">
+    <top>
+        <Label style="-fx-font-size: 20px;" />
+    </top>
+    <center>
+        <TabPane>
+            <Tab text="Ingatlanok">
+                <VBox>
+                    <TableView fx:id="propertyTable" />
+                    <HBox>
+                        <TextField fx:id="addressField" promptText="Cím" />
+                        <TextField fx:id="typeField" promptText="Típus" />
+                        <TextField fx:id="rentPriceField" promptText="Bérleti díj" />
+                        <TextField fx:id="statusField" prefHeight="26.0" prefWidth="145.0" promptText="Állapot" />
+                        <Button fx:id="addButton" prefHeight="26.0" prefWidth="93.0" text="Hozzáadás" />
+                    </HBox>
+                </VBox>
+            </Tab>
+            <Tab text="Bérlők">
+                <VBox>
+                    <TableView fx:id="tenantTable" />
+                    <HBox>
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="270.0" promptText="Név" />
+                        <TextField fx:id="phoneField" prefHeight="26.0" prefWidth="166.0" promptText="Telefonszám" />
+                        <TextField fx:id="emailField" prefHeight="26.0" prefWidth="160.0" promptText="Email" />
+                        <Button text="Hozzáadás" />
+                    </HBox>
+                </VBox>
+            </Tab>
+            <Tab text="Bérlések">
+                <VBox>
+                    <TableView fx:id="rentalTable" />
+                    <HBox>
+                        <ComboBox fx:id="propertyComboBox" prefHeight="26.0" prefWidth="151.0" />
+                        <ComboBox fx:id="tenantComboBox" prefHeight="26.0" prefWidth="129.0" />
+                        <DatePicker fx:id="startDatePicker" prefHeight="26.0" prefWidth="168.0" />
+                        <DatePicker fx:id="endDatePicker" prefHeight="26.0" prefWidth="149.0" />
+                        <Button text="Hozzáadás" />
+                    </HBox>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
